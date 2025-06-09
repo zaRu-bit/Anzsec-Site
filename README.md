@@ -1,4 +1,4 @@
-# ANZSEC — Arma 3 Milsim Unit Website
+# 💣 ANZSEC — Arma 3 Milsim Unit Website
 
 Welcome to the official website for **ANZSEC** (Australian-New Zealand Special Expeditionary Command), a tactical Arma 3 milsim unit. Created by Zaru/Khye
 
@@ -6,7 +6,7 @@ This is a **static, one-page website** built with [Astro](https://astro.build/) 
 
 ---
 
-## Purpose
+## 🎯 Purpose
 
 This website serves as a central hub for:
 
@@ -17,7 +17,7 @@ This website serves as a central hub for:
 
 ---
 
-## Tech Stack
+## 📐 Tech Stack
 
 - ⚡️ **Astro** – Fast static site generator
 - 🎨 **Tailwind CSS** – Utility-first CSS for rapid design
@@ -25,7 +25,7 @@ This website serves as a central hub for:
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```bash
 ├── public/             # Static assets (e.g. images, logo, trailer)
