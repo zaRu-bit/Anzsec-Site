@@ -1,0 +1,67 @@
+---
+---
+<header
+  id="header-wrapper"
+  class="fixed top-0 left-0 w-full z-50 bg-transparent px-4 py-4"
+>
+  <nav id="main-nav" class="w-full max-w-6xl mx-auto flex items-center justify-between text-white font-semibold font-mono text-sm sm:text-base">
+    <!-- Left nav -->
+    <div class="hidden md:flex items-center gap-6 lg:gap-24">
+      <a href="#about" class="hover:underline transition-transform hover:scale-105">About Us</a>
+      <span class="text-gray-400 text-lg">◆</span>
+      <a href="#roster" class="hover:underline transition-transform hover:scale-105">Orbat</a>
+    </div>
+
+    <!-- Logo -->
+    <a href="#hero" class="block transition-transform hover:scale-105">
+      <img src="/AnzsecLogo.png" alt="ANZSEC Logo" class="w-32 sm:w-52 select-none" />
+    </a>
+
+    <!-- Right nav -->
+    <div class="hidden md:flex items-center gap-6 lg:gap-24">
+      <a href="#missions" class="hover:underline transition-transform hover:scale-105">Join Us</a>
+      <span class="text-gray-400 text-lg">◆</span>
+      <a href="#partners" class="hover:underline transition-transform hover:scale-105">Partners</a>
+    </div>
+
+    <!-- Burger menu (mobile) -->
+    <div class="md:hidden">
+      <button id="nav-toggle" class="text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div
+  id="mobile-menu"
+  class="md:hidden opacity-0 pointer-events-none transition-opacity duration-300 mt-4 flex flex-col items-center gap-4 font-mono text-white text-lg font-semibold"
+>
+    <a href="#about" class="hover:underline">About Us</a>
+    <a href="#roster" class="hover:underline">Orbat</a>
+    <a href="#missions" class="hover:underline">Join Us</a>
+    <a href="#partners" class="hover:underline">Partners</a>
+  </div>
+
+<script is:inline>
+  if (typeof window !== 'undefined') {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    let isOpen = false;
+
+    toggle?.addEventListener('click', () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        menu.classList.remove('opacity-0', 'pointer-events-none');
+        menu.classList.add('opacity-100', 'pointer-events-auto');
+      } else {
+        menu.classList.remove('opacity-100', 'pointer-events-auto');
+        menu.classList.add('opacity-0', 'pointer-events-none');
+      }
+    });
+  }
+</script>
+</header>
