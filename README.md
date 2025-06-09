@@ -13,7 +13,7 @@ This website serves as a central hub for:
 - Introducing **ANZSEC** and our values as a milsim unit
 - Providing an overview of our **structure, roster, and past missions**
 - Offering clear instructions on **how to join our unit**
-- Maintaining a sleek, modern look while staying performance-focused and accessible
+- Maintaining a sleek, modern look while staying performance-focused and accessible for both mobile and desktop
 
 ---
 
