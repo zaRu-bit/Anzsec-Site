@@ -35,3 +35,16 @@ This website serves as a central hub for:
 │   ├── pages/          # Main .astro page
 │   └── styles/         # Tailwind CSS entry file
 └── astro.config.mjs
+```
+
+## 🛡 About ANZSEC
+
+ANZSEC is a semi-serious Arma 3 milsim unit focused on immersive, story-driven operations and strong tactical coordination. Whether you’re a veteran player or just starting out, our community is built on teamwork, challenge, and fun.
+
+## 📬 Contact & Recruitment
+
+Check out the Join Us section of the site, or connect with us via Discord https://discord.gg/YHX84JqWqS.
+
+## 🔗 License
+
+This project is open source and free to use under the MIT License. Open the LICENSE.md file for more.
