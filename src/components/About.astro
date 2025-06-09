@@ -1,28 +1,63 @@
 ---
-
 ---
-
 <section
   id="about"
-  class="relative w-full min-h-[60vh] bg-cover bg-center flex items-center justify-center px-6 py-24"
+  class="relative w-full min-h-[80vh] bg-cover bg-center px-6 py-24"
   style="background-image: url('/Screen1.png');"
 >
-  <!-- Overlay for contrast -->
-  <div class="absolute inset-0 bg-black/60"></div>
+<!-- Top Blur -->
+<div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/60 to-transparent z-10"></div>
 
-  <!-- Content container -->
-  <div class="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-    <!-- Text box left -->
-    <div class="about-fade-in opacity-0 translate-y-6 transition-all duration-800 bg-white/10 backdrop-blur-sm border border-white/20 p-6 md:p-10 shadow-xl max-w-xl font-mono text-left text-white">
-      <h2 class="text-3xl font-bold mb-4">About ANZSEC</h2>
-        <p class="text-lg leading-relaxed">
-        ANZSEC — the Australian & New Zealand Special Expeditionary Command — is an Arma 3 milsim unit founded in 2022. 
-        We simulate structured, immersive operations inspired by real military tactics, built around discipline, adaptability, and mateship.
+<!-- Bottom Blur -->
+<div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+  <!-- Overlay for contrast -->
+  <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+  <!-- Outer flex container to center the grid -->
+  <div class="relative z-10 flex justify-center items-center w-full">
+    <!-- Grid setup -->
+    <div class="grid grid-rows-2 grid-cols-2 gap-12 w-full max-w-6xl font-mono">
+
+      <!-- Top-left box -->
+      <div class="about-fade-in opacity-0 translate-y-6 transition-all duration-800 
+                  bg-white/10 backdrop-blur-sm border border-white/20 p-6 shadow-xl text-white">
+        <h2 class="text-2xl font-bold mb-3">Who We Are</h2>
+        <p class="text-base leading-relaxed">
+          ANZSEC (Australian–New Zealand Special Expeditionary Command) is an Arma 3 milsim unit established in 2022.
+          Inspired by the Australian Defence Force, our unit adopts a fictional command structure with realistic foundations — gamified to suit immersive and engaging play.
         </p>
-        <p class="text-lg leading-relaxed mt-4">
-        Our unit offers weekly missions, persistent progression, and a tight-knit community focused on both serious teamwork and enjoyable gameplay.
-        Whether you're a veteran of the genre or just beginning, ANZSEC provides training and support to help you integrate and excel.
+
+        <h2 class="text-2xl font-bold mt-4 mb-3">Our Playstyle</h2>
+        <p class="text-base leading-relaxed">
+          We operate with a company-level ORBAT, supported by custom scripts and mods that keep things fun without sacrificing realism.
+          R3F Logistics enables seamless rear-line support, with rotary and logistical detachments working in tandem with infantry to keep the fight moving.
         </p>
+      </div>
+
+      <!-- Empty cell waiting for image -->
+      <div class="flex items-center justify-center">
+        <img src="/113patch.png" alt="113 Patch" class="w-32 sm:w-52 select-none" />
+      </div>
+
+      <!-- Empty cell waiting for image -->
+      <div class="flex items-center justify-center">
+        <img src="/12delta.png" alt="12 Delta" class="w-32 sm:w-52 select-none" />
+      </div>
+
+      <!-- Bottom-right box -->
+      <div class="about-fade-in opacity-0 translate-y-6 transition-all duration-800 
+                  bg-white/10 backdrop-blur-sm border border-white/20 p-6 shadow-xl text-white text-right">
+        <h2 class="text-2xl font-bold mb-3">Operations</h2>
+        <p class="text-base leading-relaxed">
+          Led by a veteran Zeus team, our missions are handcrafted for challenge and variety — grounded in realism but designed for replayability and fun.
+          Missions span both modern and historical eras, providing variety while maintaining immersive consistency under the ANZSEC banner.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-4 mb-3">Join the Team</h2>
+        <p class="text-base leading-relaxed">
+          Whether you're a veteran milsim player or just starting out, ANZSEC offers structured training, community support, and weekly operations that emphasize teamwork, mateship, and adaptability.
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -33,13 +68,14 @@
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-6');
+        } else {
+          entry.target.classList.remove('opacity-100', 'translate-y-0');
+          entry.target.classList.add('opacity-0', 'translate-y-6');
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.2 });
 
-    const fadeInEl = document.querySelector('.about-fade-in');
-    if (fadeInEl) {
-      observer.observe(fadeInEl);
-    }
+    document.querySelectorAll('.about-fade-in').forEach((el) => observer.observe(el));
   }
 </script>

@@ -1,0 +1,129 @@
+---
+
+---
+
+<section
+  id="partners"
+  class="relative w-full min-h-[80vh] bg-cover bg-center px-6 py-24"
+  style="background-image: url('/Screen3.png');"
+>
+  <!-- Top Blur -->
+  <div
+    class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/60 to-transparent z-10"
+  >
+  </div>
+
+  <!-- Bottom Blur -->
+  <div
+    class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/60 to-transparent z-10"
+  >
+  </div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/60 z-0"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto text-left text-white font-mono">
+    <h2
+      class="text-3xl font-bold mb-12 partner-fade-in opacity-0 translate-y-6 transition-all duration-700"
+    >
+      Our Partners
+    </h2>
+
+    <!-- Grid of cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- ARTIC MILSIM -->
+      <div
+        class="partner-fade-in opacity-0 translate-y-6 transition-all duration-700 bg-white/10 backdrop-blur-sm border border-white/20 p-6 shadow-xl flex flex-col justify-between space-y-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-2">ARTIC MILSIM</h3>
+          <p class="text-sm leading-relaxed">
+            ANZSEC and ARTIC have launched a groundbreaking PMC program allowing
+            shared participation without dual-clanning conflicts. Operate your
+            own unit’s gear, follow standing orders, and experience new tactical
+            scenarios.
+          </p>
+        </div>
+        <a
+          href="https://discord.gg/YwDSMyVgWu"
+          target="_blank"
+          class="mt-4 inline-flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-800 transition-colors text-white px-4 py-2 rounded-md text-sm font-semibold font-mono"
+        >
+          <img src="/Discord.svg" alt="Discord" class="w-5 h-5 invert" />
+          Join ARTIC Discord
+        </a>
+      </div>
+
+      <!-- ANZAC Legion of the Damned -->
+      <div
+        class="partner-fade-in opacity-0 translate-y-6 transition-all duration-700 bg-white/10 backdrop-blur-sm border border-white/20 p-6 shadow-xl flex flex-col justify-between space-y-4"
+      >
+        <div>
+          <div class="flex justify-center items-center">
+            <img src="/SpartanLogo.png" alt="ALOTD Logo" class="w-25 h-25" />
+          </div>
+          <h3 class="text-xl font-bold mb-2">ANZAC Legion of the Damned</h3>
+          <p class="text-sm leading-relaxed">
+            A laid-back yet active community with seasonal events, social
+            nights, and a focus on fun and connection. Great for casual gamers
+            looking for good vibes and solid mateship.
+          </p>
+        </div>
+        <a
+          href="https://discord.com/invite/4ZQB3kTnwa"
+          target="_blank"
+          class="mt-4 inline-flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-800 transition-colors text-white px-4 py-2 rounded-md text-sm font-semibold"
+        >
+          <img src="/Discord.svg" alt="Discord" class="w-5 h-5 invert" />
+          Join LotD Discord
+        </a>
+      </div>
+
+      <!-- 985th Assault Battalion -->
+      <div
+        class="partner-fade-in opacity-0 translate-y-6 transition-all duration-700 bg-white/10 backdrop-blur-sm border border-white/20 p-6 shadow-xl flex flex-col justify-between space-y-4"
+      >
+        <div>
+          <h3 class="text-xl font-bold mb-2">985th Assault Battalion</h3>
+          <p class="text-sm leading-relaxed">
+            A Star Wars–themed starsim unit with infantry and flight ops every
+            Saturday. As a partner, no sign-up or training is required to jump
+            in and fight alongside the 985th.
+          </p>
+        </div>
+        <a
+          href="https://www.discord.gg/fBnBkGKqqj"
+          target="_blank"
+          class="mt-4 inline-flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-800 transition-colors text-white px-4 py-2 rounded-md text-sm font-semibold"
+        >
+          <img src="/Discord.svg" alt="Discord" class="w-5 h-5 invert" />
+          Join 985th Discord
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fade-in animation -->
+<script is:inline>
+  if (typeof window !== "undefined") {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-6");
+          } else {
+            entry.target.classList.remove("opacity-100", "translate-y-0");
+            entry.target.classList.add("opacity-0", "translate-y-6");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    document
+      .querySelectorAll(".partner-fade-in")
+      .forEach((el) => observer.observe(el));
+  }
+</script>
