@@ -1,0 +1,92 @@
+---
+const mods = [
+  {
+    name: "ACE3",
+    img: "/src/assets/ace3logo.png",
+    link: "https://steamcommunity.com/sharedfiles/filedetails/?id=463939057",
+  },
+  {
+    name: "CUP Terrains",
+    img: "/src/assets/cuplogo.png",
+    link: "https://steamcommunity.com/sharedfiles/filedetails/?id=583496184",
+  },
+  {
+    name: "TFAR Beta",
+    img: "/src/assets/taskforcelogo.png",
+    link: "https://steamcommunity.com/sharedfiles/filedetails/?id=894678801",
+  },
+  {
+    name: "KAT Medical",
+    img: "/src/assets/katlogo.png",
+    link: "https://steamcommunity.com/workshop/filedetails/?id=2020940806",
+  },
+];
+// make three back-to-back sets
+const trackItems = [...mods, ...mods, ...mods];
+---
+
+<section class="relative -mt-36 z-20 overflow-hidden py-10">
+  <div class="mx-auto max-w-5xl overflow-hidden">
+    <div class="slider-container group">
+      <div class="slider-track flex whitespace-nowrap">
+        {
+          trackItems.map((mod, idx) => (
+            <a
+              href={mod.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-shrink-0 mx-8 w-16 h-16
+                   opacity-50 hover:opacity-100
+                   transition-opacity duration-300"
+              aria-label={mod.name}
+            >
+              <img
+                src={mod.img}
+                alt={mod.name}
+                class="w-full h-full object-contain"
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is="global">
+  /* fade-in/out both edges */
+  .slider-container {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 20%,
+      black 80%,
+      transparent 100%
+    );
+    mask-repeat: no-repeat;
+  }
+
+  /* scroll two thirds of track width so you always have one full set in view */
+  .slider-track {
+    animation: scroll 30s linear infinite;
+  }
+  .group:hover .slider-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-66.6667%);
+    }
+  }
+</style>
