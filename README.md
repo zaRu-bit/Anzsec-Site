@@ -43,7 +43,7 @@ ANZSEC is a semi-serious Arma 3 milsim unit focused on immersive, story-driven o
 
 ## 📬 Contact & Recruitment
 
-Check out the Join Us section of the site, or connect with us via Discord https://discord.gg/YHX84JqWqS.
+Check out the Join Us section of the site, or connect with us via Discord https://discord.gg/anzsecmilsim.
 
 ## 🔗 License
 
