@@ -1,4 +1,4 @@
-# 💣 ANZSEC — Arma 3 Milsim Unit Website
+<h1 align="center">💣 ANZSEC — Arma 3 Milsim Unit Website</h1>
 
 ![Website Demo](public/Screenshot.PNG)
 
