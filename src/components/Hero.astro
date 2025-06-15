@@ -9,9 +9,10 @@
     muted
     loop
     playsinline
+    disablepictureinpicture = true
     class="absolute inset-0 w-full h-full object-cover z-0"
   >
-    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4" />
+    <source src="/anzsectrailer.mp4" type="video/mp4" />
   </video>
 
   <!-- Overlay -->
@@ -59,7 +60,7 @@
         const char = currentLine[charIndex];
         currentLineElem.appendChild(document.createTextNode(char));
         charIndex++;
-        setTimeout(typeLine, 20);
+        setTimeout(typeLine, 17);
       } else {
         lineIndex++;
         charIndex = 0;
