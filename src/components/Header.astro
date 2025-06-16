@@ -4,7 +4,7 @@
 
 <header
   id="header-wrapper"
-  class="fixed top-0 left-0 w-full z-50 bg-transparent px-4 py-4"
+  class="fixed top-0 left-0 w-full z-50 bg-transparent px-4 py-4 pointer-events-none"
 >
   <nav
     id="main-nav"
@@ -14,17 +14,17 @@
     <div class="hidden md:flex items-center gap-6 lg:gap-24">
       <a
         href="#about"
-        class="hover:underline transition-transform hover:scale-105">About Us</a
+        class="hover:underline transition-transform hover:scale-105 pointer-events-auto">About Us</a
       >
       <span class="text-white text-lg">◆</span>
       <a
         href="#orbat"
-        class="hover:underline transition-transform hover:scale-105">Orbat</a
+        class="hover:underline transition-transform hover:scale-105 pointer-events-auto">Orbat</a
       >
     </div>
 
     <!-- Logo -->
-    <a href="#hero" class="block transition-transform hover:scale-105">
+    <a href="#hero" class="block transition-transform hover:scale-105 pointer-events-auto">
       <img
         src="/AnzsecLogo.png"
         alt="ANZSEC Logo"
@@ -36,18 +36,18 @@
     <div class="hidden md:flex items-center gap-6 lg:gap-24">
       <a
         href="https://discord.gg/anzsecmilsim"
-        class="hover:underline transition-transform hover:scale-105">Our Discord</a
+        class="hover:underline transition-transform hover:scale-105 pointer-events-auto">Our Discord</a
       >
       <span class="text-white text-lg">◆</span>
       <a
         href="#partners"
-        class="hover:underline transition-transform hover:scale-105">Partners</a
+        class="hover:underline transition-transform hover:scale-105 pointer-events-auto">Partners</a
       >
     </div>
 
     <!-- Burger menu (mobile) -->
     <div class="md:hidden">
-      <button id="nav-toggle" class="text-white focus:outline-none">
+      <button id="nav-toggle" class="text-white focus:outline-none pointer-events-auto">
         <svg
           class="w-6 h-6"
           fill="none"
@@ -66,7 +66,7 @@
   <!-- Mobile nav -->
   <div
     id="mobile-menu"
-    class="md:hidden opacity-0 pointer-events-none transition-opacity duration-300 mt-4 flex flex-col items-center gap-4 font-mono text-white text-base font-semibold"
+    class="md:hidden opacity-0 pointer-events-none transition-opacity duration-300 mt-4 flex flex-col items-center gap-4 font-mono text-white text-base font-semibold bg-gray-500/35 rounded-2xl"
   >
     <a href="#about" class="hover:underline">About Us</a>
     <a href="#orbat" class="hover:underline">Orbat</a>

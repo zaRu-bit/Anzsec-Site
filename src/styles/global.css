@@ -1,23 +1,7 @@
 @import "tailwindcss";
 
-@layer utilities {
-  .bg-camo-pattern {
-    background-color: #2b2f2c; /* base green/olive tone */
-    background-image:
-      linear-gradient(90deg, rgba(70, 75, 65, 0.25) 1px, transparent 1px),
-      linear-gradient(rgba(70, 75, 65, 0.25) 1px, transparent 1px),
-      radial-gradient(rgba(20, 30, 20, 0.2) 1px, transparent 1px),
-      radial-gradient(rgba(60, 70, 60, 0.25) 2px, transparent 2px);
-    background-size:
-      12px 12px,
-      12px 12px,
-      40px 40px,
-      60px 60px;
-    background-position:
-      0 0,
-      6px 6px,
-      10px 10px,
-      20px 20px;
+@layer base {
+  html {
+    @apply font-mono;
   }
 }
-
